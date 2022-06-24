@@ -1,0 +1,32 @@
+<html>
+    <body>
+       
+          <h1>Hola soy plantilla.html</h1>
+        <p>Nombre:{{nombre_persona.upper}} {{apellido_persona}}</p>
+        <p>Fecha: {{now.year}}</p>
+            {% if nombre_persona == "Juan" %}
+            <p>Te llamas Juan</p>
+            {% else %}
+            <p>No te llamas Juan</p>
+            {% endif %}   
+     
+        
+ <ul>
+     {% if temas_curso %}
+         {% for tema in temas_curso %}
+             <li>{{tema|first|upper}}</li>
+            {% endfor %}
+     {% else %}
+         <p>aaaNo hay nada que ver aca</p>
+     {% endif %}
+ </ul>
+     {# Comentario de una linea de #}
+ {% comment %}      
+   fasdf
+   fsadfasdf
+   dsafasdf
+   varias lineas de falopa 
+ {% endcomment %}
+   {% include 'superior/barra.html' %} 
+    </body>
+</html>
